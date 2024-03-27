@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Tugas FGD Zunistira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: "Kode Mono", monospace;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .jumbotron {
+      padding-top: 6rem;
+      background-color: #b6d1fd;
+    }
+
+    #edu {
+      background-color: #b6d1fd;
+    }
+
+    #Contact {
+      background-color: #b6d1fd;
+    }
+
+    section {
+      padding-top: 5rem;
+    }
+  </style>
+  <script>
+    function sendContactMessage() {
+      let name = $('#name').val();
+      let email = $('#email').val();
+      let message = $('#message').val();
+
+      $.ajax({
+        type: "POST",
+        url: "/contact",
+        data: {
+          name_give: name,
+          email_give: email,
+          message_give: message
+        },
+        success: function(response) {
+          alert('msg');
+          window.location.reload();
+        }
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">ZUNISTIRA 👑</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active fw-bold" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#edu">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
+
+  <!-- home -->
+  <section id="home" class="jumbotron text-center">
+    <img src="https://i.ibb.co/2hDvJKK/SLPT76454.jpg" alt="Zunistira" width="300" class="rounded-circle">
+    <h1 class="display-4">Lalu Sirdi Zunistira</h1>
+    <p class="lead">Student LearningX.</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir home -->
+
+  <!-- about me -->
+  <section id="about">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2 class="fw-bold">About Me 😜</h2>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4">
+            <P>I am a passionate 6th-semester student majoring in electrical engineering with proven leadership
+              experience in university organizations at the University of Mataram. Specifically, I have been actively
+              involved in the UNRAM Electrical Student Association, where I served as an associate specializing in
+              advocacy and strategic studies. </P>
+          </div>
+          <div class="col-md-4">
+            <P>I am a fast learner, goal-oriented, and thrive in challenging environments. By merging my team leadership
+              experience with creative thinking, my objective is to foster collaborative success.</P>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill=" #b6d1fd" fill-opacity="1"
+          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+  <!-- akhir about me -->
+
+  <!-- pendidikan -->
+  <section id="edu">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2 class="fw-bold">Education 🎓</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img src="https://i.ibb.co/T0PDry2/1709316121430.jpg" class="card-img-top" alt="SMANGER">
+            <div class="card-body">
+              <p class="card-text">SMA Negeri 1 Gerung</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img src="https://i.ibb.co/3mTdLwv/1709316145153.jpg" class="card-img-top" alt="UNRAM">
+            <div class="card-body">
+              <p class="card-text">Universitas Mataram</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir pendidikan -->
+
+  <!-- projek -->
+  <section id="projects">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2 class="fw-bold">My Projects 🥰</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://i.ibb.co/xMrxHM9/pj4.jpg" class="card-img-top" alt="project 1">
+            <div class="card-body">
+              <p class="card-text">Project abstract 1</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://i.ibb.co/LQt0HQ7/pj2.jpg" class="card-img-top" alt="project 2">
+            <div class="card-body">
+              <p class="card-text">Project abstract 2</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://i.ibb.co/61Nxd9b/pj3.jpg" class="card-img-top" alt="project 3">
+            <div class="card-body">
+              <p class="card-text">Project abstract 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill=" #b6d1fd" fill-opacity="1"
+        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir projek -->
+
+  <!-- kontak -->
+  <section id="Contact">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2 class="fw-bold">Contact Me 📧</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name:</label>
+              <input type="text" class="form-control" id="name" aria-describedby="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" aria-describedby="email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message:</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <button type="button" onclick="sendContactMessage()" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#0d6efd" fill-opacity="1"
+        d="M0,128L60,128C120,128,240,128,360,144C480,160,600,192,720,208C840,224,960,224,1080,213.3C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir kontak -->
+
+
+  <!-- footer -->
+  <footer class="bg-primary text-white text-center pb-3">
+    <p>Created with 💖 by <a href="https://www.instagram.com/zunistira?igsh=MWsxMmpmdDUyb2FuOQ=="
+        class="text-white fw-bold">@Zunistira</a></p>
+  </footer>
+  <!-- akhir footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
